@@ -1,2 +1,2 @@
 # Freetime
-Something todo during free time:)
+Something I do during my free time:)

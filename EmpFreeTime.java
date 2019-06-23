@@ -1,3 +1,21 @@
+/*
+We are given a list schedule of employees, which represents the working time for each employee.
+
+Each employee has a list of non-overlapping Intervals, and these intervals are in sorted order.
+
+Return the list of finite intervals representing common, positive-length free time for all employees, also in sorted order.
+
+Example 1:
+
+Input: schedule = [[[1,2],[5,6]],[[1,3]],[[4,10]]]
+Output: [[3,4]]
+Explanation:
+There are a total of three employees, and all common
+free time intervals would be [-inf, 1], [3, 4], [10, inf].
+We discard any intervals that contain inf as they aren't finite.
+
+*/
+
 import java.util.*;
 
 class EmpFreeTime {
@@ -74,7 +92,11 @@ class EmpFreeTime {
         EmpFreeTime thisObj = new EmpFreeTime();
 	List<Interval> result = null;
 
+	/**
+	* Test1
+	*/
         System.out.println("Test1: [ [[1,2],[5,6]] , [[1,3]] ,[[4,10]] ]");
+
 	list.add(new Interval(1, 3)); 
 	list.add(new Interval(5, 6)); 
         master.add(new ArrayList(list));
@@ -90,6 +112,9 @@ class EmpFreeTime {
 	result = thisObj.employeeFreeTime(master);
 	thisObj.print(result);
 
+	/**
+	* Test2
+	*/
         System.out.println("\nTest2: [ [[1,3],[6,7]] ,[[2,4]], [[2,5],[9,12]] ]");
         master.clear();
         list.clear();

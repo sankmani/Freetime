@@ -76,6 +76,9 @@ class EmpFreeTime {
         return freeTime;
     }
 
+    /**
+     * Helper method
+     */
     private void print(List<Interval> list) {
 	for(Interval intv: list) {
 		System.out.println(intv.start + ", " + intv.end);
